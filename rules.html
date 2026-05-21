@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+    </style>
+</head>
+    <body>
+    <div id="background"></div>
+        <header>
+            <h1 class="nova-square-regular">BLACKJACK</h1>
+            <div class="menu_buttons">
+                <a href="file:///C:/Users/User/PhpstormProjects/blackjack/main_menu.html"><button class="menu_button">MAIN MENU</button></a>
+                <span class="divider">|</span>
+                <a><button class="menu_button" id="settings-btn" onclick="show_settings()">SETTINGS</button></a>
+                <span class="divider">|</span>
+                <a href="file:///C:/Users/User/PhpstormProjects/blackjack/single_game.html"><button class="menu_button">SINGLEPLAYER</button></a>
+                <!--            <span class="divider">|</span>-->
+                <!--            <a><button class="menu_button">ACHIEVEMENTS</button></a>-->
+                <!--            <span class="divider">|</span>-->
+                <!--            <a><button class="menu_button">ACCOUNT</button></a>-->
+            </div>
+        </header>
+    <div id="rules">
+        <div class="settings_text">
+            <pre>
+                General Rules:
+                In Blackjack, everyone plays against the dealer. Players receive all cards face up, and the dealer’s first card is face up and the second is face down.
+                The object of the game is to get closer to 21 than the dealer without going over 21.
+                If a hand goes over 21, it is called a “bust” or “break,” and the wager is lost. In 21, Jacks, Queens, Kings, and 10s count as 10.
+                An Ace may be played as a one or an 11. All other cards are played at face value.
+                When you receive your first two cards, you may either “stand” or “hit”.
+                When you “stand,” it means you feel you are close enough to 21 and no longer wish any additional cards, indicated by waving off with your hand.
+                If you wish to receive another card or “hit,” tap or scratch the table behind your wager with your finger.
+                In either situation, you will never touch the cards; everything is communicated using hand signals.
+                You may draw as many cards as you want until you are close to 21 or until you “bust.”
+
+                Surrender:
+                Players have the option of surrendering one half of their original wager after receiving their first two cards.
+                If you surrender your cards, the dealer will take half of your wager.
+
+                Doubling Down:
+                You can double down in blackjack after receiving your first two cards.
+                You may elect to wager an additional amount not to exceed the value of the original bet. With a double down, you will be dealt one additional card only.
+            </pre>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,375 @@
+.general_button {
+    border: 0.231vh solid #c8a228;
+    text-align: center;
+    background-color: transparent;
+    transition-duration: 0.4s;
+    width: 18.284vh;
+    padding: 0.579vh;
+    margin-top: 2.315vh;
+    margin-left: 1.157vh;
+    margin-right: 1.157vh;
+    font-family: "Nova Square", sans-serif;
+    font-size: 2.315vh;
+    color: #c8a228;
+    user-select: none;
+}
+.general_button_menu {
+    border: 0.631vh solid #c8a228;
+    text-align: center;
+    background-color: transparent;
+    transition-duration: 0.4s;
+    width: auto;
+    padding: 0.579vh;
+    margin-top: 2.315vh;
+    margin-left: 1.157vh;
+    margin-right: 1.157vh;
+    font-family: "Nova Square", sans-serif;
+    font-size: 5.315vh;
+    color: #c8a228;
+    user-select: none;
+}
+.general_button:hover {
+    background-color: #D6C6BC;
+    color: white;
+}
+.general_button_menu:hover {
+    background-color: #D6C6BC;
+    color: white;
+}
+#money{
+    position: absolute;
+    left: 1.157vh;
+    top: 1.557vh;
+    font-size: 4vh;
+    font-family: "Nova Square", sans-serif;
+    color: #c8a228;
+}
+#clear-bet{
+    position: relative;
+    margin: 0 auto;
+    width: 30vh;
+}
+body {
+    background-color: #503724;
+    margin: 0;
+}
+#background{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("argyle.png");
+    background-repeat: repeat;
+}
+.divider{
+    font-family: "Nova Square", sans-serif;
+    vertical-align: baseline;
+    font-size: 2.894vh;
+    margin-left: 3vh;
+    margin-right: 3vh;
+    text-align: center;
+    color: #c8a228;
+}
+.bet_text{
+    position: relative;
+    top: -1.736vh;
+    left:-3.472vh;
+    font-size: 1vh;
+    font-family: "Nova Square", sans-serif;
+    color: black;
+}
+.menu_button{
+    font-family: "Nova Square", sans-serif;
+    vertical-align: baseline;
+    font-size: 2.894vh;
+    text-align: center;
+    background-color: transparent;
+    width: auto;
+    margin: 2vh;
+    color: #c8a228;
+    user-select: none;
+}
+.menu_button:hover {
+    color: #efe4ce;
+}
+.img_button{
+    position: relative;
+    width: 6vh;
+    height: 6vh;
+    transition-duration: 0.4s;
+    margin-right: 0.579vh;
+    margin-left: 0.579vh;
+    user-select: none;
+}
+#popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(26, 18, 10, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.popup_text{
+    color: #D6C6BC;
+    text-align: center;
+    font-family: "Nova Square", sans-serif;
+    font-size: 5vh;
+}
+.popup_text button{
+    width: 15vh;
+    border: 0.5vh #D6C6BC solid;
+    margin: 2vh;
+}
+.img_button:hover{
+    transform: scale(1.2);
+}
+button {
+    all: unset;
+    cursor: pointer;
+}
+footer {
+    position: fixed;
+    margin-bottom: 1.157vh;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color:#1a120a;
+    border-bottom: 0.231vh solid #8b6914;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header a{
+    display: inline-block;
+    width: auto;
+    text-align: center;
+}
+a:link {
+    text-decoration: none;
+}
+h1 {
+    position: fixed;
+    font-size: 3.472vh;
+    color: #c8a228;
+   /* -webkit-text-stroke-color: #584514 ;
+    -webkit-text-stroke-width: 2px;*/
+    left: 2.1vh;
+}
+.nova-square-regular{
+    font-family: "Nova Square", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#deck{
+    position: absolute;
+    top: 40vh;
+    height: 20vh;
+    width: auto;
+    transform: translate(-50%, -50%);
+    box-shadow: #1a120a 0.5vh 0.5vh 0.5vh;
+    border-radius: 1vh;
+}
+#outcome{
+    font-family: "Nova Square", sans-serif;
+    font-size: 5vh;
+    color: #c8a228;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.table{
+    position: fixed;
+    top: 42%;
+    display: flex;
+    left: 50%;
+    height: 55vh;
+    width: 70vw;
+    border-radius: 15vh;
+    transform: translate(-50%, -50%);
+    background-image: url("table_cloth.png") ;
+    background-repeat: repeat;
+    /*background-color: #1e4d1e;*/
+    border: 0.6vh solid #8b6914;
+    align-items: center;
+    justify-content: space-around;
+}
+#table_border{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 52vh;
+    width: 68.8vw;
+    border-radius: 13.5vh;
+    border: 0.4vh dotted #8b6914;
+    transform: translate(-50%, -50%);
+}
+.controls{
+    border-radius: 1.157vh;
+    left: 15%;
+    right: 15%;
+    background-color: #1a120a;
+    background-image: url("crissxcross.png");
+    background-repeat: repeat;
+    position: fixed;
+    height: 20vh;
+    border: 0.579vh solid #8b6914;
+    bottom: 0;
+    margin-bottom: 4vh;
+    text-align: center;
+    color: #c8a228;
+}
+#btn-hit{
+    color: #D6C6BC;
+    background-color: #e35d2d;
+    border: 0.231vh solid #D6C6BC;
+    font-size: 3vh;
+    width: 23vh;
+}
+#btn-stand{
+    color: #D6C6BC;
+    background-color: seagreen;
+    border: 0.231vh solid #D6C6BC;
+    font-size: 3vh;
+    width: 23vh;
+}
+.bets{
+    display: block;
+    font-family: "Nova Square", sans-serif;
+    position: absolute;
+    text-align: center;
+    right: 1.441vh;
+    top: 1.5vh;
+    align-items: center;
+    font-size: 2vh;
+}
+#bet{
+    font-family: "Nova Square", sans-serif;
+    font-size: 3vh;
+    margin: 0;
+    color: #c8a228;
+    text-align: center;
+}
+.player{
+    text-align: center;
+    font-family: "Nova Square", sans-serif;
+    width: 40vw;
+    height: 50vh;
+    color: #D6C6BC;
+    font-size: 2vh;
+}
+.dealer{
+    text-align: center;
+    font-family: "Nova Square", sans-serif;
+    width: 40vw;
+    height: 50vh;
+    color: #D6C6BC;
+    font-size: 2vh;
+}
+#warning{
+    font-family: "Nova Square", sans-serif;
+    font-size: 3vh;
+    color: #c8a228;
+    text-align: center;
+    position: fixed;
+    width: 30%;
+    top: 84%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*border: 0.579vh solid #8b6914;*/
+    transition-duration: 0.4s;
+}
+.start_button{
+    font-family: "Nova Square", sans-serif;
+    font-size: 5.787vh;
+    text-align: center;
+    color: #c8a228;
+    background-color: #1a120a;
+    border: 0.579vh solid #8b6914;
+    border-radius: 2vh;
+    width: 23.148vh;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-duration: 0.4s;
+}
+.start_button:hover{
+    transform: translate(-50%, -50%) scale(1.2)
+}
+#save{
+    font-family: "Nova Square", sans-serif;
+    color: white;
+    font-size: 3vh;
+    position: fixed;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    margin: 6vh;
+    width: 10vh;
+    padding: 1vh;
+    background-color: dodgerblue;
+}
+#settings{
+    position: fixed;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 92vh;
+    width: 100vw;
+    background-color: rgba(26, 18, 10, 0.6);
+    display: none;
+}
+#rules{
+    position: fixed;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    height: 92vh;
+    width: 90vw;
+}
+.settings_active{
+    color: #efe4ce;
+}
+.settings_text{
+    font-size: 2vh;
+    font-family: "Nova Square", sans-serif;
+    color: white;
+    margin: 5vh;
+}
+#hand{
+    display: flex;
+    width: auto;
+    justify-content: center;
+
+}
+#hand img{
+    margin-left: 0.5vh;
+    margin-right: 0.5vh;
+    height: 20vh;
+    width: auto;
+}
+#dealer_hand img{
+    margin-left: 0.5vh;
+    margin-right: 0.5vh;
+    height: 20vh;
+    width: auto;
+}
+.settings_text div{
+    margin-left: 3vh;
+    display: flex;
+    align-items: center;
+}
+.settings_text label{
+    margin-right: 2vh;
+}

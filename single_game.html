@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+    </style>
+</head>
+<body>
+    <div id="background"></div>
+    <header>
+        <h1 class="nova-square-regular">BLACKJACK</h1>
+        <div class="menu_buttons">
+            <a href="file:///C:/Users/User/PhpstormProjects/blackjack/main_menu.html"><button class="menu_button">MAIN MENU</button></a>
+            <span class="divider">|</span>
+            <span class="divider">|</span>
+            <a href="file:///C:/Users/User/PhpstormProjects/blackjack/single_game.html"><button class="menu_button">SINGLEPLAYER</button></a>
+            <!--            <span class="divider">|</span>-->
+            <!--            <a><button class="menu_button">ACHIEVEMENTS</button></a>-->
+            <!--            <span class="divider">|</span>-->
+            <!--            <a><button class="menu_button">ACCOUNT</button></a>-->
+        </div>
+    </header>
+
+    <header>
+        <h1 class="nova-square-regular">BLACKJACK</h1>
+        <div id="menu_buttons">
+            <a href="file:///C:/Users/User/PhpstormProjects/blackjack/main_menu.html"><button class="menu_button">MAIN MENU</button></a>
+            <span class="divider">|</span>
+            <a><button class="menu_button" id="settings-btn" onclick="show_settings()">SETTINGS</button></a>
+            <span class="divider">|</span>
+            <a href="file:///C:/Users/User/PhpstormProjects/blackjack/rules.html"><button class="menu_button">RULES</button></a>
+<!--            <span class="divider">|</span>-->
+<!--            <a><button class="menu_button">ACHIEVEMENTS</button></a>-->
+<!--            <span class="divider">|</span>-->
+<!--            <a><button class="menu_button">ACCOUNT</button></a>-->
+        </div>
+    </header>
+    <div class="table">
+        <div id="table_border"></div>
+        <div class="player">
+            <h2>
+                <span>You</span>
+            </h2>
+            <br>
+            <div id="hand">
+                <!-- <span id="value_func"></span>
+                <a id="equals"> =</a> --->
+            </div>
+            <div>
+                <h2 id="current_value"></h2>
+            </div>
+        </div>
+        <div>
+            <h3 id="outcome"></h3>
+        </div>
+
+        <div>
+            <img id="deck" src="card_back.png" alt="deck">
+        </div>
+        <div>
+            <button id="btn-start" class="start_button" onclick="start()">START</button>
+        </div>
+        <div>
+            <span id="warning">Warning</span>
+        </div>
+        <div class="dealer">
+            <h2>
+                <span>Dealer</span>
+            </h2>
+            <br>
+            <div id="dealer_hand">
+            </div>
+            <div>
+                <h2 id="dealer_current_value"></h2>
+            </div>
+        </div>
+    </div>
+    <div class="controls">
+        <a id="money">Money</a>
+        <div>
+            <button id="btn-hit" class="general_button" onclick="hit_me()">HIT</button>
+            <button id="btn-stand" class="general_button" onclick="im_gonna_stay()">STAND</button>
+        </div>
+        <div>
+            <button id="btn-double" class="general_button" onclick="double()">DOUBLE</button>
+<!--            <button id="btn-split" class="general_button" onclick="split()">SPLIT</button>-->
+            <button id="btn-surrender" class="general_button" onclick="surrender()">SURRENDER</button>
+
+        </div>
+
+        <div class="bets">
+            <div><p id="bet">Current bet: </p></div>
+            <div>Increase bet:</div>
+            <div>
+                <button id="chip+1" onclick="addBet(1)"><img src="chip1.png" alt="1" class="img_button"></button>
+                <button id="chip+5" onclick="addBet(5)"><img src="chip5.png" alt="5" class="img_button"></button>
+                <button id="chip+25" onclick="addBet(25)"><img src="chip25.png" alt="25" class="img_button"></button>
+                <button id="chip+100" onclick="addBet(100)"><img src="chip100.png" alt="100" class="img_button"></button>
+            </div>
+            <div style="text-align: center">
+                <button id="clear-bet" class="general_button" onclick="clear_bet()">CLEAR BET</button>
+            </div>
+        </div>
+    </div>
+    <div id="popup">
+        <div class="popup_text">
+            <div>Do you want to surrender?</div>
+            <span>
+                <button id="surr_yes" onclick="im_done()">YES</button>
+                <button id="surr_no" onclick="ill_keep_going()">NO</button>
+            </span>
+            <div style="height: 15vh"></div>
+            <div>Note: You will get only half of your original bet back.</div>
+        </DIV>
+    </div>
+    <div id="settings">
+        <div class="settings_text">
+            <span>AUDIO</span>
+            <div>
+                <label for="mute">Mute</label>
+                <input type="checkbox" onclick="mute_set()" id="mute">
+            </div>
+            <div>
+                <label for="music">Music volume</label>
+                <input type="range" min="1" max="100" value="30" id="music">
+            </div>
+            <div>
+                <label for="sfx">Sound effects volume</label>
+                <input type="range" min="1" max="100" value="30" id="sfx">
+            </div>
+        </div>
+<!--        <button id="save" onclick="save()">SAVE</button>-->
+    </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
+        import { getAuth } from "firebase/auth";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCoHl-1Ru4Ppn8yzWSeTaYEtC-HVVXGUjg",
+            authDomain: "the-blackjack-pack.firebaseapp.com",
+            projectId: "the-blackjack-pack",
+            storageBucket: "the-blackjack-pack.firebasestorage.app",
+            messagingSenderId: "1055405861134",
+            appId: "1:1055405861134:web:65ae429fea77db3eab8f5f"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(firebaseConfig);
+
+    </script>
+</body>
+</html>
